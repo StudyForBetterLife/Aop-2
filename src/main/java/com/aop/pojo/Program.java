@@ -1,7 +1,7 @@
 package com.aop.pojo;
 
-import com.aop.pojo.entity.Exam;
-import com.aop.pojo.entity.ExamIF;
+import com.aop.entity.Exam;
+import com.aop.entity.ExamIF;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

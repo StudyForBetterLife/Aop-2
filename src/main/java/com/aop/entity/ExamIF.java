@@ -1,4 +1,4 @@
-package com.aop.pojo.entity;
+package com.aop.entity;
 
 public interface ExamIF {
 

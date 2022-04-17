@@ -1,10 +1,12 @@
-package com.aop.pojo.entity;
+package com.aop.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Setter
 public class Exam implements ExamIF {
 
     private int kor;
