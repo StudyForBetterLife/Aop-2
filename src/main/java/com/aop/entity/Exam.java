@@ -1,5 +1,6 @@
 package com.aop.entity;
 
+import com.aop.anno.LogExecutionTime;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -39,6 +40,7 @@ public class Exam implements ExamIF {
     }
 
     @Override
+    @LogExecutionTime
     public float avg() {
 
         float result = total() / 4.0f;
