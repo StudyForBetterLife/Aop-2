@@ -17,7 +17,7 @@
     <bean id="logAfterReturningAdvice" class="com.aop.advice.LogAfterReturningAdvice"/>
     <bean id="logAfterThrowingAdvice" class="com.aop.advice.LogAfterThrowingAdvice"/>
 
-    <bean id="classicPointCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+<!--    <bean id="classicPointCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
         <property name="mappedName" value="total"/>
     </bean>
 
@@ -29,6 +29,16 @@
     <bean id="classicAroundAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
         <property name="advice" ref="logAroundAdvice"/>
         <property name="pointcut" ref="classicPointCut"/>
+    </bean>
+    -->
+    <bean id="classicBeforeAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+        <property name="advice" ref="logBeforeAdvice"/>
+        <property name="mappedName" value="total"/>
+    </bean>
+
+    <bean id="classicAroundAdvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+        <property name="advice" ref="logAroundAdvice"/>
+        <property name="mappedName" value="total"/>
     </bean>
 
     <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
